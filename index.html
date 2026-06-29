@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consulta de e-mail institucional</title>
+  <title>Consulta de Horários</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,138 +44,115 @@
     <span>Portal Acadêmico</span>
   </div>
 </div>
-      
-      <a class="topbar-link" href="https://consultaedu.com.br/" target="_blank" rel="noopener noreferrer">
-         ← Voltar ao Portal
-      </a>
-    </nav>
 
-    <section class="hero-content">
-      <div class="hero-copy">
-        <div class="eyebrow">Consulta rápida e segura</div>
-        <h1>Encontre seu e-mail institucional em poucos segundos.</h1>
-        <p>
-          Digite seu nome completo ou matrícula para localizar seu acesso ao ambiente acadêmico.
-          Após a consulta, use o e-mail informado para entrar no Google Sala de Aula.
-        </p>
-        <div class="hero-badges">
-          <span>✓ UNIFAVENI</span>
-          <span>✓ UNIABEU</span>
-          <span>✓ UNISBA</span>
-        </div>
+    <a class="topbar-link" href="https://consultaedu.com.br/" target="_blank">
+      ← Voltar ao Portal
+    </a>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-copy">
+      <div class="eyebrow">Horários online</div>
+      <h1>Consulte os horários das suas aulas</h1>
+      <p>
+        Selecione sua instituição e curso para visualizar a aula acontecendo agora,
+        a próxima aula e o horário completo.
+      </p>
+
+      <div class="hero-badges">
+        <span>🟢 Aula atual</span>
+        <span>⏰ Próxima aula</span>
+        <span>📚 Grade completa</span>
       </div>
+    </div>
 
-      <div class="hero-panel" aria-hidden="true">
-        <div class="mini-card active">
-          <span>📧</span>
-          <div>
-            <strong>E-mail institucional</strong>
-            <small>Consulta por nome ou matrícula</small>
-          </div>
-        </div>
-        <div class="mini-card">
-          <span>🔑</span>
-          <div>
-            <strong>Senha inicial</strong>
-            <small>Disponível quando cadastrada</small>
-          </div>
-        </div>
-        <div class="mini-card">
-          <span>🎓</span>
-          <div>
-            <strong>Google Classroom</strong>
-            <small>Acesso direto às aulas</small>
-          </div>
-        </div>
-      </div>
-    </section>
-  </header>
-
-  <main class="main-layout">
-    <section class="search-card" aria-labelledby="titulo-consulta">
-      <div class="card-header">
-        <div class="card-icon">🔎</div>
+    <div class="hero-panel">
+      <div class="mini-card active">
+        <span>🟢</span>
         <div>
-          <h2 id="titulo-consulta">Consultar e-mail</h2>
-          <p>Informe seu nome completo ou matrícula.</p>
+          <strong>Aula em tempo real</strong>
+          <small>Veja se existe aula acontecendo agora</small>
         </div>
       </div>
 
-      <div class="input-group">
-        <label for="busca">Nome completo ou matrícula</label>
-        <div class="input-shell">
-          <span>⌕</span>
-          <input id="busca" type="text" autocomplete="off" placeholder="Ex.: João da Silva ou 012345" onkeydown="handleEnter(event)" />
+      <div class="mini-card">
+        <span>📅</span>
+        <div>
+          <strong>Horário completo</strong>
+          <small>Consulta organizada por dia da semana</small>
         </div>
       </div>
 
-      <button id="btn" class="primary-btn" onclick="consultar()">
-        <span>Consultar agora</span>
-        <strong>→</strong>
-      </button>
-
-      <div id="loading" class="loading" role="status" aria-live="polite">
-        <div class="spinner"></div>
-        <span>Pesquisando cadastro...</span>
-      </div>
-
-      <div id="retorno" class="results" aria-live="polite"></div>
-
-      <div class="notice-grid">
-        <div class="notice soft">
-          <strong>⏳ Recém-matriculado?</strong>
-          <span>Aguarde a liberação do e-mail institucional.</span>
-        </div>
-        <div class="notice warning">
-          <strong>⚠️ Não encontrou?</strong>
-          <span>Tente digitar sem acentos ou use a matrícula.</span>
+      <div class="mini-card">
+        <span>🎓</span>
+        <div>
+          <strong>Por curso</strong>
+          <small>Escolha a instituição e o curso desejado</small>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</header>
 
-    <aside class="info-card" aria-labelledby="titulo-classroom">
-      <div class="info-hero">
-        <div class="info-icon">🚀</div>
-        <h2 id="titulo-classroom">Acesse o Google Sala de Aula</h2>
-        <p>
-          Depois de encontrar seu e-mail institucional, acesse o Classroom e faça login usando o endereço informado na consulta.
-        </p>
-        <a class="secondary-btn" href="https://classroom.google.com" target="_blank" rel="noopener noreferrer">
-          Abrir Google Sala de Aula
-        </a>
+<main class="main-layout">
+
+  <section class="search-card">
+    <div class="card-header">
+      <div class="card-icon">🔎</div>
+      <div>
+        <h2>Consultar horários</h2>
+        <p>Informe sua instituição e curso para continuar.</p>
       </div>
+    </div>
 
-      <div class="steps">
-        <a class="step-card" href="https://drive.google.com/file/d/1C1Gi6L8xB6NpAk1MniViTGx2w_5npl6U/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-          <span>💻</span>
-          <div>
-            <strong>Tutorial para computador</strong>
-            <small>Veja como entrar pelo notebook ou PC.</small>
-          </div>
-        </a>
-
-        <a class="step-card" href="https://drive.google.com/file/d/1neYusD5PGZJX03I6_sOutcZrgISVScFg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-          <span>📱</span>
-          <div>
-            <strong>Tutorial para celular</strong>
-            <small>Android e iOS.</small>
-          </div>
-        </a>
+    <div class="input-group">
+      <label for="faculdade">Instituição</label>
+      <div class="select-shell">
+        <span>🏫</span>
+        <select id="faculdade">
+          <option value="">Selecione a faculdade</option>
+        </select>
       </div>
+    </div>
 
-      <div class="support-box">
-        <strong>Suporte de acesso</strong>
-        <span>suporte.acesso@unifaveni.com.br</span>
-        <span>WhatsApp: 27 99816-7072</span>
+    <div class="input-group">
+      <label for="curso">Curso</label>
+      <div class="select-shell">
+        <span>🎓</span>
+        <select id="curso" disabled>
+          <option value="">Selecione o curso</option>
+        </select>
       </div>
-    </aside>
-  </main>
+    </div>
+    
+    <div class="input-group">
+      <label for="periodo">Período</label>
+      <div class="select-shell">
+        <span>📘</span>
+        <select id="periodo" disabled>
+          <option value="">Selecione o período</option>
+        </select>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <span>Portal de Acesso Acadêmico</span>
-    <span>Consulta institucional para alunos semipresenciais.</span>
-  </footer>
+</main>
 
-  <script src="script.js"></script>
+<section id="resultado" class="results-layout oculto">
+  <div class="result-card destaque" id="aulaAgora"></div>
+  <div class="result-card destaque secundaria" id="proximaAula"></div>
+
+  <div class="result-card grade-card">
+    <h2>📅 Horário completo</h2>
+    <div id="gradeHorarios"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>Consulta de Horários Acadêmicos</span>
+  <span>Use sempre seu e-mail institucional.</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
