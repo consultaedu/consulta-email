@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consulta de Horários</title>
+  <title>Consulta de E-mail Institucional</title>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,19 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Horários do Semipresencial. Consulte seus horários e acesse o Google Classroom.">
+  <meta name="description" content="Consulte seu e-mail institucional e acesse o Google Classroom.">
 
-<meta property="og:title" content="ConsultaEdu">
-<meta property="og:description" content="Horários do Semipresencial. Consulte seus horários e acesse o Google Classroom.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://consultaedu.github.io/">
-<meta property="og:image" content="https://consultaedu.github.io/preview.png">
+  <meta property="og:title" content="ConsultaEdu | Consulta de E-mail">
+  <meta property="og:description" content="Consulte seu e-mail institucional e acesse o Google Classroom.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://consultaedu.com.br/consulta-email/">
+  <meta property="og:image" content="https://consultaedu.com.br/preview.png">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ConsultaEdu">
-<meta name="twitter:description" content="Horários do Semipresencial.">
-<meta name="twitter:image" content="https://consultaedu.github.io/preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ConsultaEdu | Consulta de E-mail">
+  <meta name="twitter:description" content="Consulte seu e-mail institucional.">
+  <meta name="twitter:image" content="https://consultaedu.com.br/preview.png">
 </head>
+
 <body>
 
 <div class="page-bg">
@@ -35,59 +36,61 @@
 <header class="hero">
   <div class="topbar">
     <div class="brand">
-  <img src="grupo-faveni.png" alt="Grupo Educacional FAVENI" class="brand-logo">
+      <img src="grupo-faveni.png" alt="Grupo Educacional FAVENI" class="brand-logo">
 
-  <div class="brand-divider"></div>
+      <div class="brand-divider"></div>
 
-  <div class="brand-text">
-    <strong>ConsultaEdu</strong>
-    <span>Portal Acadêmico</span>
-  </div>
-</div>
+      <div class="brand-text">
+        <strong>ConsultaEdu</strong>
+        <span>Portal Acadêmico</span>
+      </div>
+    </div>
 
-    <a class="topbar-link" href="https://consultaedu.com.br/" target="_blank">
+    <a class="topbar-link" href="https://consultaedu.com.br/">
       ← Voltar ao Portal
     </a>
   </div>
 
   <div class="hero-content">
     <div class="hero-copy">
-      <div class="eyebrow">Horários online</div>
-      <h1>Consulte os horários das suas aulas</h1>
+      <div class="eyebrow">Consulta de e-mail</div>
+
+      <h1>Consulte seu e-mail institucional</h1>
+
       <p>
-        Selecione sua instituição e curso para visualizar a aula acontecendo agora,
-        a próxima aula e o horário completo.
+        Informe sua instituição e seus dados para localizar seu e-mail institucional
+        e acessar os serviços acadêmicos.
       </p>
 
       <div class="hero-badges">
-        <span>🟢 Aula atual</span>
-        <span>⏰ Próxima aula</span>
-        <span>📚 Grade completa</span>
+        <span>📧 E-mail institucional</span>
+        <span>🔐 Dados de acesso</span>
+        <span>🎓 Google Classroom</span>
       </div>
     </div>
 
     <div class="hero-panel">
       <div class="mini-card active">
-        <span>🟢</span>
+        <span>📧</span>
         <div>
-          <strong>Aula em tempo real</strong>
-          <small>Veja se existe aula acontecendo agora</small>
+          <strong>E-mail institucional</strong>
+          <small>Localize seu endereço de acesso</small>
         </div>
       </div>
 
       <div class="mini-card">
-        <span>📅</span>
+        <span>🔎</span>
         <div>
-          <strong>Horário completo</strong>
-          <small>Consulta organizada por dia da semana</small>
+          <strong>Consulta rápida</strong>
+          <small>Busque por nome ou matrícula</small>
         </div>
       </div>
 
       <div class="mini-card">
         <span>🎓</span>
         <div>
-          <strong>Por curso</strong>
-          <small>Escolha a instituição e o curso desejado</small>
+          <strong>Google Classroom</strong>
+          <small>Acesse usando o e-mail encontrado</small>
         </div>
       </div>
     </div>
@@ -100,8 +103,8 @@
     <div class="card-header">
       <div class="card-icon">🔎</div>
       <div>
-        <h2>Consultar horários</h2>
-        <p>Informe sua instituição e curso para continuar.</p>
+        <h2>Consultar e-mail</h2>
+        <p>Informe sua instituição e busque por nome ou matrícula.</p>
       </div>
     </div>
 
@@ -116,40 +119,34 @@
     </div>
 
     <div class="input-group">
-      <label for="curso">Curso</label>
+      <label for="busca">Nome completo ou matrícula</label>
       <div class="select-shell">
-        <span>🎓</span>
-        <select id="curso" disabled>
-          <option value="">Selecione o curso</option>
-        </select>
+        <span>👤</span>
+        <input
+          type="text"
+          id="busca"
+          placeholder="Digite seu nome ou matrícula"
+          autocomplete="off"
+        >
       </div>
     </div>
-    
-    <div class="input-group">
-      <label for="periodo">Período</label>
-      <div class="select-shell">
-        <span>📘</span>
-        <select id="periodo" disabled>
-          <option value="">Selecione o período</option>
-        </select>
-      </div>
-    </div>
+
+    <button id="btnConsultar" class="primary-btn" type="button">
+      Consultar e-mail
+    </button>
   </section>
 
 </main>
 
 <section id="resultado" class="results-layout oculto">
-  <div class="result-card destaque" id="aulaAgora"></div>
-  <div class="result-card destaque secundaria" id="proximaAula"></div>
-
   <div class="result-card grade-card">
-    <h2>📅 Horário completo</h2>
-    <div id="gradeHorarios"></div>
+    <h2>📧 Resultado da consulta</h2>
+    <div id="dadosAluno"></div>
   </div>
 </section>
 
 <footer class="footer">
-  <span>Consulta de Horários Acadêmicos</span>
+  <span>Consulta de E-mail Institucional</span>
   <span>Use sempre seu e-mail institucional.</span>
 </footer>
 
